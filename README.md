@@ -59,6 +59,7 @@ There is a lot of improvements that can be done in this project.
 The following are the main ones:
 - Change scripts to run parameterized tests dynamically.
 - Improve the environments variables/files strategy that it's different across multiple environments.
-- Rewrite the BDD test to pass values dynamically
+- Rewrite the BDD test to pass values dynamically.
 - Define better assertions to test whether the API endpoints are actually retrieving the necessary data.
 - Verify that the required input data is present before submitting the requests.
+- Add tags as a way to organize different scenario executions.
