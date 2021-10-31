@@ -36,6 +36,22 @@ Then('I get response code {int}', async function (code) {
     });
 });
 
+When('I send request to weather service api endpoint', async function (path) {
+    cy.request({
+        method: 'GET',
+        url: Cypress.env('baseUrl') + '/weather?q=' + CITY.Name + '&appid=' + Cypress.env('apiKey') + 'ajs',
+        failOnStatusCode: false
+    })
+    .should(response => {
+        cy.task('pushValue', { name: 'responseCode', value: response.status })
+    });
+});
+
+Then('I get response code 401', async function () {
+    cy.task('getValue', 'responseCode').then((responseCode) => {
+        assert.equal(responseCode, 401);
+    });
+});
 //TODO
 // Given('A city name {string}', function (city) {
 //     cy.log(city);

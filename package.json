@@ -28,7 +28,7 @@
     "nonGlobalStepDefinitions": true
   },
   "dependencies": {
-    "cypress": "^8.6.0",
+    "cypress": "^8.7.0",
     "fsevents": "^2.3.2"
   }
 }

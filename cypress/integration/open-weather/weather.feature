@@ -15,6 +15,10 @@ Feature: Current weather data for one location
         When I send GET request to weather service api endpoint
         Then I get response code 200
 
+    Scenario: ApiKey not authorized
+        When I send request to weather service api endpoint
+        Then I get response code 401
+
     # Scenario Outline: Current weather data by city name
     #     Given A city name <city>
     #     When I send GET request to weather service api endpoint
